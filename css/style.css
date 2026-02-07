@@ -129,76 +129,74 @@ footer { background: #111; color: white; padding: 40px 5%; text-align: center; f
     .nav-menu.active { right: 0; }
     .nav-menu li { margin: 15px 0; margin-left: 0; }
 }
-.emergency-button {
-    background-color: #e30613; /* Das Rot aus deinem Logo */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
+/* Top-Bar Container */
+.top-bar {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 8px 5%;
+    font-family: sans-serif;
+}
+
+.top-bar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+/* Linke Seite: Info */
+.top-bar-info {
+    display: flex;
+    gap: 15px;
+    opacity: 0.9;
+}
+
+.separator {
+    color: #e30613;
     font-weight: bold;
+}
+
+/* Rechte Seite: Notdienst Link */
+.top-bar-emergency {
+    color: #ffffff;
+    text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 10px;
-    position: relative;
-    transition: transform 0.3s ease;
-}
-
-.emergency-button {
-    /* Farben & Hintergrund */
-    background-color: #1a1a1a;        /* Edles Anthrazit/Schwarz */
-    color: #ffffff !important;
-    
-    /* Rahmen & Form */
-    border: 1.5px solid #e30613;      /* Dünner roter Rand passend zum Blitz */
-    padding: 8px 18px;
-    border-radius: 50px;              /* "Pillen"-Form wirkt moderner */
-    
-    /* Positionierung */
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    height: fit-content;
-    align-self: center;
-    
-    /* Schrift & Deko */
-    text-decoration: none !important;
+    gap: 8px;
     font-weight: 600;
-    font-size: 13px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;        /* Wirkt professioneller */
-    
-    /* Effekte */
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s ease;
 }
 
-.emergency-button:hover {
-    background-color: #e30613;        /* Füllt sich beim Drüberfahren rot */
-    color: #fff !important;
-    transform: translateY(-2px);      /* Kleiner Sprung-Effekt */
-    box-shadow: 0 6px 15px rgba(227, 6, 19, 0.4); /* Rotes Glühen beim Hover */
+.top-bar-emergency:hover {
+    color: #e30613;
 }
 
-/* Der pulsierende Punkt - jetzt in Rot für den Kontrast */
-.pulse {
-    width: 8px;
-    height: 8px;
+.emergency-text {
+    color: #e30613; /* Nur das Wort "Notdienst" ist rot */
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+/* Der kleine pulsierende Punkt */
+.pulse-small {
+    width: 6px;
+    height: 6px;
     background-color: #e30613;
     border-radius: 50%;
-    position: relative;
+    box-shadow: 0 0 0 rgba(227, 6, 19, 0.4);
+    animation: pulse-small-anim 2s infinite;
 }
 
-.pulse::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: inherit;
-    border-radius: inherit;
-    animation: pulse-ring 2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+@keyframes pulse-small-anim {
+    0% { box-shadow: 0 0 0 0 rgba(227, 6, 19, 0.7); }
+    70% { box-shadow: 0 0 0 8px rgba(227, 6, 19, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(227, 6, 19, 0); }
 }
 
-@keyframes pulse-ring {
-    0% { transform: scale(0.5); opacity: 0.8; }
-    80%, 100% { transform: scale(2.5); opacity: 0; }
+/* Responsive: Auf Handys Info ausblenden, nur Notruf zeigen */
+@media (max-width: 600px) {
+    .top-bar-info { display: none; }
+    .top-bar-content { justify-content: center; }
 }
