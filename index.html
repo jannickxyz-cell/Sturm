@@ -7,13 +7,24 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <div class="top-bar">
-        <span>Sprockhövel & Umgebung • Meisterbetrieb seit 1956</span>
-        <span>Notdienst: <a href="tel:0202522025">0202 / 52 20 25</a></span>
+        <div class="top-bar-content">
+            <div class="top-bar-info">
+                <span>📍 Sprockhövel & Umgebung</span>
+                <span class="separator">|</span>
+                <span>📧 info@elektro-sturm.de</span>
+            </div>
+            <a href="tel:+49123456789" class="top-bar-emergency">
+                <span class="pulse-small"></span>
+                <span class="emergency-text">24h Notdienst:</span> 0171 1234567
+            </a>
+        </div>
     </div>
 
     <header>
+        <nav>
+            </nav>
+    </header>
         <a href="index.html" class="logo-container" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
     <div class="logo-text">
         <span style="display: block; font-size: 24px; font-weight: 800; color: #000; letter-spacing: 1px; line-height: 1;">ELEKTRO-STURM</span>
@@ -31,10 +42,7 @@
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
             <div class="emergency-nav">
-    <a href="tel:+49123456789" class="emergency-button">
-    <span class="pulse"></span>
-    24h Notdienst
-</a>
+    
 </div>
         </nav>
         <button class="hamburger" onclick="toggleMenu()">
@@ -108,6 +116,7 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
 
 
 
