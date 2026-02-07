@@ -143,29 +143,62 @@ footer { background: #111; color: white; padding: 40px 5%; text-align: center; f
     transition: transform 0.3s ease;
 }
 
+.emergency-button {
+    /* Farben & Hintergrund */
+    background-color: #1a1a1a;        /* Edles Anthrazit/Schwarz */
+    color: #ffffff !important;
+    
+    /* Rahmen & Form */
+    border: 1.5px solid #e30613;      /* Dünner roter Rand passend zum Blitz */
+    padding: 8px 18px;
+    border-radius: 50px;              /* "Pillen"-Form wirkt moderner */
+    
+    /* Positionierung */
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    height: fit-content;
+    align-self: center;
+    
+    /* Schrift & Deko */
+    text-decoration: none !important;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;        /* Wirkt professioneller */
+    
+    /* Effekte */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 .emergency-button:hover {
-    transform: scale(1.05);
-    background-color: #b3050f;
+    background-color: #e30613;        /* Füllt sich beim Drüberfahren rot */
+    color: #fff !important;
+    transform: translateY(-2px);      /* Kleiner Sprung-Effekt */
+    box-shadow: 0 6px 15px rgba(227, 6, 19, 0.4); /* Rotes Glühen beim Hover */
 }
 
-/* Der blinkende Punkt-Effekt */
+/* Der pulsierende Punkt - jetzt in Rot für den Kontrast */
 .pulse {
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
+    width: 8px;
+    height: 8px;
+    background-color: #e30613;
     border-radius: 50%;
-    box-shadow: 0 0 0 rgba(255, 255, 255, 0.7);
-    animation: pulse-animation 2s infinite;
+    position: relative;
 }
 
-@keyframes pulse-animation {
-    0% {
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
-    }
-    70% {
-        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-    }
+.pulse::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: inherit;
+    animation: pulse-ring 2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
+@keyframes pulse-ring {
+    0% { transform: scale(0.5); opacity: 0.8; }
+    80%, 100% { transform: scale(2.5); opacity: 0; }
 }
