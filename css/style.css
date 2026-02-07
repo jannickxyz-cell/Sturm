@@ -129,3 +129,43 @@ footer { background: #111; color: white; padding: 40px 5%; text-align: center; f
     .nav-menu.active { right: 0; }
     .nav-menu li { margin: 15px 0; margin-left: 0; }
 }
+.emergency-button {
+    background-color: #e30613; /* Das Rot aus deinem Logo */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.emergency-button:hover {
+    transform: scale(1.05);
+    background-color: #b3050f;
+}
+
+/* Der blinkende Punkt-Effekt */
+.pulse {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.7);
+    animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
