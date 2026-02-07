@@ -30,17 +30,37 @@ body {
 
 /* HEADER */
 header {
-    padding: 0 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #eee;
-    position: sticky;
-    top: 0;
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    height: 80px;
+    background-color: #ffffff; /* Weißer Hintergrund für den Header */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Dezenter Schatten nach unten */
+    padding: 15px 0;
+}
+
+nav {
+    max-width: 1200px;      /* Gleiche Breite wie die Top-Bar */
+    margin: 0 auto;         /* Zentriert den gesamten Nav-Block */
+    padding: 0 5%;          /* Sicherheitsabstand zum Rand */
+    display: flex;          /* Aktiviert das "Gummiband" */
+    justify-content: space-between; /* Drückt Logo nach links, Menü nach rechts */
+    align-items: center;    /* Sorgt dafür, dass Logo & Text auf einer Höhe sind */
+}
+
+.nav-links {
+    display: flex;          /* Macht aus der Liste eine Reihe */
+    list-style: none;       /* Entfernt die Aufzählungspunkte */
+    gap: 30px;              /* Abstand zwischen den Menüpunkten (Home, Kontakt, etc.) */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e30613;         /* Farbe beim Drüberfahren (passend zum Blitz) */
 }
 .logo { font-weight: 900; font-size: 1.5rem; text-decoration: none; color: #000; letter-spacing: -1px; }
 .logo span { color: var(--sturm-cyan); }
