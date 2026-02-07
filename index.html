@@ -3,140 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elektro Sturm m.b.H. | Sprockhövel | Qualität trifft Tradition</title>
+    <title>Elektro Sturm m.b.H. | Qualität trifft Tradition</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
     <div class="top-bar">
-        <div class="top-bar-content">
-            <div class="top-bar-info">
+        <div class="container top-bar-content">
+            <div class="top-bar-left">
                 <span>📍 Sprockhövel & Umgebung</span>
-                <span class="separator">|</span>
+                <span class="sep">|</span>
                 <span>📧 info@elektro-sturm.de</span>
             </div>
-            <a href="tel:+491711234567" class="top-bar-emergency">
-                <span class="pulse-small"></span>
-                <span class="emergency-text">24h Notdienst:</span> 0171 1234567
+            <a href="tel:01711234567" class="notdienst-link">
+                <span class="dot"></span> 24h Notdienst: 0171 1234567
             </a>
         </div>
     </div>
 
-    <header>
-        <nav class="main-nav">
-            <a href="index.html" class="logo-container">
+    <header class="main-header">
+        <nav class="container nav-container">
+            <a href="index.html" class="logo-box">
                 <div class="logo-text">
-                    <span class="logo-main">ELEKTRO-STURM</span>
-                    <span class="logo-sub">Gesellschaft für Elektrotechnik und Elektronik m. b. H.</span>
+                    <span class="maintitle">ELEKTRO-STURM</span>
+                    <span class="subtitle">Gesellschaft für Elektrotechnik und Elektronik m. b. H.</span>
                 </div>
-                <svg width="30" height="50" viewBox="0 0 24 24" fill="#e30613" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13 2L3 14h7v8l10-12h-7l3-8z"/>
-                </svg>
+                <svg class="bolt" width="25" height="40" viewBox="0 0 24 24" fill="#e30613"><path d="M13 2L3 14h7v8l10-12h-7l3-8z"/></svg>
             </a>
-
-            <ul class="nav-menu" id="nav-menu">
+            <ul class="nav-links">
                 <li><a href="index.html">Start</a></li>
                 <li><a href="ueber-uns.html">Unternehmen</a></li>
                 <li><a href="leistungen.html">Leistungen</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
-
-            <button class="hamburger" onclick="toggleMenu()">
-                <div></div><div></div><div></div>
-            </button>
         </nav>
     </header>
-        <nav>
-            </nav>
-    </header>
-        <a href="index.html" class="logo-container" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
-    <div class="logo-text">
-        <span style="display: block; font-size: 24px; font-weight: 800; color: #000; letter-spacing: 1px; line-height: 1;">ELEKTRO-STURM</span>
-        <span style="display: block; font-size: 10px; color: #666; font-weight: 400;">Gesellschaft für Elektrotechnik und Elektronik m. b. h.</span>
-    </div>
-    <svg width="30" height="50" viewBox="0 0 24 24" fill="#e30613" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13 2L3 14h7v8l10-12h-7l3-8z"/>
-    </svg>
-</a>
-        <nav>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html">Start</a></li>
-                <li><a href="ueber-uns.html">Unternehmen</a></li>
-                <li><a href="leistungen.html">Leistungen</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-            </ul>
-            <div class="emergency-nav">
-    
-</div>
-        </nav>
-        <button class="hamburger" onclick="toggleMenu()">
-            <div></div><div></div><div></div>
-        </button>
-    </header>
 
-    <section id="home" class="hero">
-        <div class="hero-overlay">
-            <p class="hero-subtitle">TRADITION & INNOVATION</p>
-            <h1>Qualität trifft Tradition.</h1>
-            <p>Ihr Partner für Industrie und Handwerk in Sprockhövel.</p>
-            <a href="leistungen.html" class="btn">Leistungen</a>
-        </div>
-    </section>
-
-    <div class="stats-bar" id="stats-section">
-        <div class="stat-item">
-            <h3 class="counter" data-target="1956">0</h3>
-            <p>Gegründet</p>
-        </div>
-        <div class="stat-item">
-            <h3 class="counter" data-target="2">0</h3>
-            <p>Generation</p>
-        </div>
-        <div class="stat-item">
-            <h3 class="counter" data-target="24">0</h3>
-            <p>h Notdienst</p>
-        </div>
-        <div class="stat-item">
-            <h3 class="counter" data-target="100">0</h3>
-            <p>% Meisterstolz</p>
-        </div>
-    </div>
-
-    <section id="history" class="history-section">
-        <div class="history-text">
-            <h2>Über 65 Jahre <span>Erfahrung.</span></h2>
-            <p>Seit 1956 verbinden wir solides Handwerk mit modernster Technik in Sprockhövel.</p>
-            <a href="tel:0202522025" class="btn btn-outline">Jetzt anrufen</a>
-        </div>
-        <div class="history-image-placeholder">
-    <img src="assets/images/IMG_0305.jpeg" alt="Elektro Sturm Team" style="width:100%; height:100%; object-fit:cover;">
-</div>
-    </section>
-
-    <section id="services" class="bg-gray">
-        <h2 class="section-title">Kompetenzen</h2>
-        <div class="grid">
-            <div class="service-card"><span class="service-number">01</span><h3>Installation</h3><p>Industrie- & Hausanlagen.</p></div>
-            <div class="service-card"><span class="service-number">02</span><h3>Wartung</h3><p>DGUV V3 Prüfungen.</p></div>
-            <div class="service-card"><span class="service-number">03</span><h3>EDV</h3><p>Netzwerk & Glasfaser.</p></div>
-            <div class="service-card"><span class="service-number">04</span><h3>Solar</h3><p>PV & Wallboxen.</p></div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="contact-box">
-            <h2>Kontakt</h2>
-            <div class="contact-info-grid">
-                <div class="info-card"><h4>Telefon</h4><p>0202 / 52 20 25</p></div>
-                <div class="info-card"><h4>E-Mail</h4><p>info@elektro-sturm.de</p></div>
-                <div class="info-card"><h4>Ort</h4><p>42109 Wuppertal</p></div>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-card">
+                <p class="hero-label">TRADITION & INNOVATION</p>
+                <h1>Qualität trifft Tradition.</h1>
+                <p>Ihr Partner für Industrie und Handwerk in Sprockhövel.</p>
+                <a href="leistungen.html" class="btn-cyan">Leistungen</a>
             </div>
-            <a href="tel:0202522025" class="btn">Anrufen</a>
         </div>
     </section>
 
-    <footer>&copy; 2026 Elektro Sturm m.b.H. | <a href="impressum.html">Impressum</a></footer>
+    <div class="stats-stripe">
+        <div class="container stats-grid">
+            <div class="stat-box"><h3>1956</h3><p>Gegründet</p></div>
+            <div class="stat-box"><h3>2</h3><p>Generation</p></div>
+            <div class="stat-box"><h3>24</h3><p>h Notdienst</p></div>
+            <div class="stat-box"><h3>100</h3><p>% Meisterstolz</p></div>
+        </div>
+    </div>
 
-    <script src="js/main.js"></script>
+    <section class="history container">
+        <div class="history-content">
+            <h2>Über 65 Jahre <span>Erfahrung.</span></h2>
+            <p>Seit 1956 verbinden wir solides Handwerk mit modernster Technik.</p>
+            <a href="tel:0202522025" class="btn-dark">JETZT ANRUFEN</a>
+        </div>
+        <div class="history-img">
+            <img src="assets/images/IMG_0305.jpeg" alt="Team">
+        </div>
+    </section>
+
 </body>
 </html>
 
